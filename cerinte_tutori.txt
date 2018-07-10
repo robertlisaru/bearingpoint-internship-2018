@@ -1,0 +1,26 @@
+Proiect:
+
+Project management tool:
+·         Admin (can create projects and assign tasks to other users, including himself)
+·         More than one project can be managed at a certain moment
+·         A project can have associated more than one task
+·         An user can have assigned more than one tasks (relevant for any number of projects)
+·         The possibility for user to generate an report with his workload and the status of his tasks
+·         The possibility for Admin to generate reports for any user (including himself)
+
+1.       Provide requirement document
+2.       Design database schema
+3.       Implement login page
+a.       On error login display error message on the login page.
+b.       On successful login, direct user to page with all projects managed by the application. Each project name will have a link to the project page.
+4.       The project page should contain:
+a.       Title
+b.       Description of the project
+c.       Release date
+d.       list of tasks for that project  (a table  with following columns :  Task ID | Task Name | Estimated time of completion | Status |  Time so far| Assigned to)
+e.       The task name will have a link to a page where the task can be modified:
+                                      i.            change status
+                                    ii.            add time
+                                  iii.            add comment
+                                  iv.            modify description
+                                    v.            attach files.
