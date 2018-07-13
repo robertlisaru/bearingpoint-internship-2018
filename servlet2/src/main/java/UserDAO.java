@@ -52,6 +52,7 @@ public class UserDAO {
 				e.printStackTrace();
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
+				//test comment
 			}
 		}
 	
