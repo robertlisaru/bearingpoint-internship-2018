@@ -6,9 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bb8fb9a-df7b-485f-8502-e9171556d87f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6bb8fb9a-df7b-485f-8502-e9171556d87f" name="Default" comment="ChooseFile Source" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +21,8 @@
       <file leaf-file-name="uploadServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uploadServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+            <state relative-caret-position="489">
+              <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/loginCheck.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="48" column="61" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="61" />
+              <caret line="48" column="61" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,8 +122,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="606" />
-    <option name="y" value="-21" />
+    <option name="x" value="399" />
+    <option name="y" value="48" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -351,19 +349,26 @@
       <workItem from="1531421668425" duration="135000" />
       <workItem from="1531494930013" duration="13000" />
       <workItem from="1531495010044" duration="7582000" />
-      <workItem from="1531502765489" duration="4411000" />
+      <workItem from="1531502765489" duration="4644000" />
     </task>
+    <task id="LOCAL-00001" summary="ChooseFile Source">
+      <created>1531507209883</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1531507209884</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23110000" />
+    <option name="totallyTimeSpent" value="23343000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="668" y="68" width="1400" height="1000" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.27552083" side_tool="true" visible="true" weight="0.36556855" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007225" side_tool="true" visible="true" weight="0.3502825" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.30393198" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
@@ -380,11 +385,11 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.72447914" visible="true" weight="0.36556855" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49927744" visible="true" weight="0.3502825" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.72447914" weight="0.36556855" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49748743" visible="true" weight="0.13958333" />
-      <window_info id="Web" order="2" sideWeight="0.5025126" side_tool="true" visible="true" weight="0.13958333" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4973913" visible="true" weight="0.19364162" />
+      <window_info id="Web" order="2" sideWeight="0.5026087" side_tool="true" visible="true" weight="0.19364162" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -398,6 +403,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -405,6 +436,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="ChooseFile Source" />
+    <option name="LAST_COMMIT_MESSAGE" value="ChooseFile Source" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/loginCheck.java">
@@ -774,7 +807,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/loginCheck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="48" column="61" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="61" />
+          <caret line="48" column="61" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -783,8 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uploadServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        <state relative-caret-position="489">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
