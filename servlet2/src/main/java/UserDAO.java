@@ -12,7 +12,7 @@ public class UserDAO {
 	private Statement stm = null;
 	private PreparedStatement pstm = null;
 	private ResultSet rs = null;
-	static final String DATABASE_URL = "jdbc:mysql://localhost:3306/useraccess";
+	static final String DATABASE_URL = "jdbc:mysql://localhost:3306/proiect";
 
 	
 	public void  insert(User newUser)

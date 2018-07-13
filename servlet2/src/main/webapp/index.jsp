@@ -26,7 +26,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/util.css">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 
-<title>Insert title here</title>
+<title>OMA Tech</title>
 </head>
 <body>
 	
