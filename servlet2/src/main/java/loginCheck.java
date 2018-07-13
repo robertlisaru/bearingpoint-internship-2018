@@ -47,7 +47,7 @@ public class loginCheck extends HttpServlet {
                 if (username != null) {
 
                     Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-                    Connection con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/proiect","root","");
+                    Connection con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/useraccess","root","");
                     String sql = "SELECT * FROM users where username=? AND pass=?";
                     PreparedStatement pst = con.prepareStatement(sql);
                     pst.setString(1,username);
