@@ -19,8 +19,9 @@ public class uploadServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // gets values of text fields
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
+        String projectName = request.getParameter("projectName");
+        String assignedTo = request.getParameter("assignedTo");
+        String comments = request.getParameter("comments");
 
         ; // input stream of the upload file
 
@@ -43,10 +44,11 @@ public class uploadServlet extends HttpServlet {
             Connection conn =DriverManager.getConnection( "jdbc:mysql://localhost:3306/appdb","root","");
 
             // constructs SQL statement
-            String sql = "INSERT INTO contacts (first_name, last_name, photo) values (?, ?, ?)";
+            String sql = "INSERT INTO contacts (projectName, assignedTo, photo,comments) values (?, ?, ?, ?)";
             PreparedStatement statement = conn.prepareStatement(sql);
-            statement.setString(1, firstName);
-            statement.setString(2, lastName);
+            statement.setString(1, projectName);
+            statement.setString(2, assignedTo);
+            statement.setString(4, comments);
 
             if (inputStream != null) {
                 // fetches input stream of the upload file for the blob column
