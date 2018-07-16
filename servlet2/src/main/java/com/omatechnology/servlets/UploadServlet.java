@@ -1,3 +1,5 @@
+package com.omatechnology.servlets;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -13,9 +15,10 @@ import java.sql.SQLException;
 
 @WebServlet("/uploadServlet")
 @MultipartConfig(maxFileSize = 161772151)
-public class uploadServlet extends HttpServlet {
-    Connection conn =  null;
-    PreparedStatement statement =null;
+public class UploadServlet extends HttpServlet {
+    Connection conn = null;
+    PreparedStatement statement = null;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // gets values of text fields
@@ -40,8 +43,7 @@ public class uploadServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-
-            Connection conn =DriverManager.getConnection( "jdbc:mysql://localhost:3306/appdb","root","");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/appdb", "root", "");
 
             // constructs SQL statement
             String sql = "INSERT INTO contacts (projectName, assignedTo, photo,comments) values (?, ?, ?, ?)";
@@ -52,25 +54,20 @@ public class uploadServlet extends HttpServlet {
 
             if (inputStream != null) {
                 // fetches input stream of the upload file for the blob column
-               // statement.setBlob(3, inputStream);
-                statement.setBytes(3,inputStream);
+                // statement.setBlob(3, inputStream);
+                statement.setBytes(3, inputStream);
             }
-
             // sends the statement to the database server
             int row = statement.executeUpdate();
             if (row > 0) {
                 message = "File uploaded and saved into database";
             }
-
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         request.setAttribute("Message", message);
-
         // forwards to the message page
         getServletContext().getRequestDispatcher("/message.jsp").forward(request, response);
     }

@@ -48,30 +48,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AddProject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/AddProject.java">
+    <leaf>
+      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectPanel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ProjectPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectPanelDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ProjectPanelDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            <state relative-caret-position="1700">
+              <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -83,6 +65,7 @@
       <list>
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -90,7 +73,6 @@
     <findStrings>
       <find>../../../../OMA/WebContent</find>
       <find>process</find>
-      <find>pass</find>
       <find>tasks</find>
       <find>logout</find>
       <find>import com\.sun\.java\.swing\.plaf\.windows\.TMSchema\;\n\nimport javax\.servlet\.ServletException\;\nimport javax\.servlet\.annotation\.WebServlet\;\nimport javax\.servlet\.http\.HttpServlet\;\nimport javax\.servlet\.http\.HttpServletRequest\;\nimport javax\.servlet\.http\.HttpServletResponse\;\nimport javax\.servlet\.http\.Part\;\nimport java\.io\.IOException\;\nimport java\.io\.InputStream\;\nimport java\.io\.PrintWriter\;\nimport java\.util\.Random\;\nimport javax\.servlet\.RequestDispatcher\;\n\n\@WebServlet\(name \= \&quot;UploadFileController\&quot;\)\npublic class UploadFileController extends HttpServlet \{\n    protected void doPost\(HttpServletRequest request\, HttpServletResponse response\) throws ServletException\, IOException \{\n\n        \/\/ gets absolute path of the web application\n        String appPath \= request\.getServletContext\(\)\.getRealPath\(\&quot;\&quot;\)\;\n        \/\/ constructs path of the directory to save uploaded file\n        String savePath \= appPath \+ File\.separator \+ SAVE_DIR\;\n\n        \/\/ creates the save directory if it does not exists\n        File fileSaveDir \= new File\(savePath\)\;\n        if \(\!fileSaveDir\.exists\(\)\) \{\n            fileSaveDir\.mkdir\(\)\;\n        \}\n\n        for \(Part part \: request\.getParts\(\)\) \{\n            String fileName \= extractFileName\(part\)\;\n            \/\/ refines the fileName in case it is an absolute path\n            fileName \= new File\(fileName\)\.getName\(\)\;\n            part\.write\(savePath \+ File\.separator \+ fileName\)\;\n        \}\n        request\.setAttribute\(\&quot;message\&quot;\, \&quot;Upload has been done successfully\!\&quot;\)\;\n        getServletContext\(\)\.getRequestDispatcher\(\&quot;\/message\.jsp\&quot;\)\.forward\(\n                request\, response\)\;\n\n\n    \}\n\n    protected void doGet\(HttpServletRequest request\, HttpServletResponse response\) throws ServletException\, IOException \{\n\n\n\n    \}\n\}\n</find>
@@ -109,8 +91,10 @@
       <find>&lt;select</find>
       <find>project name</find>
       <find>button</find>
-      <find>form</find>
       <find>&lt;frm</find>
+      <find>ProjectPanel</find>
+      <find>form</find>
+      <find>pass</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,8 +107,6 @@
         <option value="$PROJECT_DIR$/src/main/java/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/register.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/welcome.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/loginCheck.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/PanelWeb/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/PanelWeb/css/style.css" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -136,10 +118,30 @@
         <option value="$PROJECT_DIR$/src/main/webapp/PanelWeb/index1.html" />
         <option value="$PROJECT_DIR$/src/main/java/downloadServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/AddProject.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ProjectPanelDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/PanelWeb/index2.html" />
         <option value="$PROJECT_DIR$/src/main/java/ProjectPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loginCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/java/LoginCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/java/LoginCheckServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RegisterServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ProjectPanelServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ProjectPanelDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dataaccess/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dataaccess/ProjectPanelDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dataaccess/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dataaccess/UserDAOInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/omatechnology/entities/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/LoginCheckServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/ProjectPanelServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/UploadServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/dataaccess/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/RegisterServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/omatechnology/entities/Project.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/PanelWeb/index2.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/CreateProjectServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dataaccess/ProjectDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dataaccess/ProjectDAOInterface.java" />
       </list>
     </option>
   </component>
@@ -156,10 +158,26 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="servlet Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="servlet Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="320" />
     <option name="y" value="-16" />
     <option name="width" value="1400" />
@@ -171,9 +189,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,7 +219,34 @@
               <item name="servlet2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="omatechnology" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="servlet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="servlet2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="omatechnology" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="servlet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="servlet2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="omatechnology" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="servlet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="servlet2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dataaccess" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="servlet" type="b2602c69:ProjectViewProjectNode" />
@@ -214,6 +256,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,14 +276,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\trainee-project\servlet2\src\main\webapp" />
-      <recent name="C:\Users\MrVasea\Desktop\servlet2\src\main\java" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\trainee-project\servlet2\src\main\webapp" />
       <recent name="D:\GitHub\trainee-project\servlet2\src\main\webapp\PanelWeb\css" />
       <recent name="C:\Users\MrVasea\Desktop\servlet2\src\main\webapp" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="dataaccess" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\trainee-project\servlet2\src\main\webapp" />
+      <recent name="C:\Users\MrVasea\Desktop\servlet2\src\main\java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,7 +301,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomy">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -273,6 +321,7 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="index2.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/PanelWeb/index2.html" />
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -367,6 +416,15 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Tomy" />
+      <item itemvalue="JavaScript Debug.index2.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index2.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -423,15 +481,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34722000" />
+    <option name="totallyTimeSpent" value="42845000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="786" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.27864584" side_tool="true" visible="true" weight="0.24867162" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.27993527" side_tool="true" weight="0.2351145" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.30393198" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32928804" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -439,26 +498,53 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995749" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5206107" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49895832" weight="0.3103082" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49895832" weight="0.30992368" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49895832" weight="0.32943678" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7213542" weight="0.24867162" />
+      <window_info anchor="right" x="0" y="0" width="274" height="586" id="Documentation" side_tool="true" weight="0.32928804" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" sideWeight="0.49895832" weight="0.32943678" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7200647" weight="0.2351145" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4893918" visible="true" weight="0.25208333" />
-      <window_info id="Web" order="2" sideWeight="0.5106082" side_tool="true" visible="true" weight="0.25208333" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49895832" weight="0.32943678" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48854962" visible="true" weight="0.22653721" />
+      <window_info id="Web" order="2" sideWeight="0.5114504" side_tool="true" weight="0.2564725" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49895832" weight="0.32824427" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7213542" weight="0.24867162" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.27864584" side_tool="true" visible="true" weight="0.24867162" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4893918" visible="true" weight="0.25208333" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info id="Web" order="2" sideWeight="0.5106082" side_tool="true" visible="true" weight="0.25208333" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49895832" weight="0.32943678" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.30393198" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995749" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49895832" weight="0.3103082" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49895832" weight="0.32943678" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Designer" order="2" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,31 +586,12 @@
     <MESSAGE value="ChooseFile Source" />
     <option name="LAST_COMMIT_MESSAGE" value="ChooseFile Source" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="11" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="95" selection-start-line="35" selection-start-column="95" selection-end-line="35" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loginCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -532,21 +599,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/register.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/RegisterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataaccess/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/entities/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
@@ -567,7 +634,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loginCheck.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/LoginCheckServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="54" column="54" lean-forward="true" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
@@ -584,21 +651,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/register.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/RegisterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataaccess/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/entities/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
@@ -619,7 +686,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loginCheck.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/LoginCheckServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
@@ -629,7 +696,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loginCheck.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/LoginCheckServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
@@ -639,14 +706,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataaccess/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="47" column="55" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/entities/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
@@ -667,7 +734,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/register.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/RegisterServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
@@ -679,23 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/PanelWeb/js/lib/c3/c3.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -725,13 +775,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UploadFileController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/upload_form.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/message.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/upload.jsp" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -740,96 +783,139 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/downloadServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/downloadServlet.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataaccess/DatabaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" column="54" lean-forward="true" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/PanelWeb/index1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="499" column="26" lean-forward="true" selection-start-line="499" selection-start-column="26" selection-end-line="499" selection-end-column="26" />
+        <state>
+          <caret line="123" column="30" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loginCheck.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/UploadServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="61" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="61" />
+        <state relative-caret-position="969">
+          <caret line="57" column="51" lean-forward="true" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="68" column="32" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="68" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/register.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataaccess/UserDAOInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataaccess/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/RegisterServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/LoginCheckServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/entities/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/PanelWeb/index2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-307">
-          <caret line="413" column="37" lean-forward="true" selection-start-line="413" selection-start-column="37" selection-end-line="413" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="96">
+          <caret line="437" column="68" selection-start-line="437" selection-start-column="68" selection-end-line="437" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/omatechnology/servlets/CreateProjectServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataaccess/ProjectDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dataaccess/ProjectDAOInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/PanelWeb/chart-morris.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1870" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/welcome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/message.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1079">
-          <caret line="86" column="26" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uploadServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-429">
-          <caret line="23" column="59" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="23" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AddProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ProjectPanelDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ProjectPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="1700">
+          <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,6 @@
-public class AddProject {
+package com.omatechnology.entities;
+
+public class Project {
 
     private String projectName;
     private String manager;
@@ -8,7 +10,7 @@ public class AddProject {
     private String status;
 
 
-    public AddProject(String projectName, String manager, String comments, String releaseDate, String description, String status) {
+    public Project(String projectName, String manager, String client, String releaseDate, String description, String status) {
         this.setProjectName(projectName);
         this.setManager(manager);
         this.setClient(client);
@@ -18,7 +20,7 @@ public class AddProject {
 
     }
 
-    public String getProjectName() {
+    public String getName() {
         return projectName;
     }
 

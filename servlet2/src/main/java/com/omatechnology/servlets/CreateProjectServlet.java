@@ -1,16 +1,20 @@
+package com.omatechnology.servlets;
+
+import com.omatechnology.entities.Project;
+import dataaccess.ProjectDAOImpl;
+import dataaccess.ProjectDAOInterface;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 
-@WebServlet("/ProjectPanel")
-public class ProjectPanel extends HttpServlet {
-    Connection conn =  null;
-    PreparedStatement statement =null;
+@WebServlet("/CreateProject")
+public class CreateProjectServlet extends HttpServlet {
+    ProjectDAOInterface projectDAO = new ProjectDAOImpl();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String projectName = request.getParameter("projectName");
         String manager = request.getParameter("manager");
@@ -18,13 +22,8 @@ public class ProjectPanel extends HttpServlet {
         String releaseDate = request.getParameter("releaseDate");
         String description = request.getParameter("description");
         String status = request.getParameter("status");
-        AddProject addProject = new AddProject(projectName,manager,client,releaseDate,description,status);
-        new ProjectPanelDAO().insert(addProject);
-        response.sendRedirect("message.jsp");
-
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        Project project = new Project(projectName, manager, client, releaseDate, description, status);
+        projectDAO.insert(project);
+        response.sendRedirect("/PanelWeb/index2.html");
     }
 }
