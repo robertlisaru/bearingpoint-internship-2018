@@ -1,8 +1,8 @@
 package com.omatechnology.servlets;
 
 import com.omatechnology.entities.User;
-import dataaccess.UserDAOImpl;
-import dataaccess.UserDAOInterface;
+import com.omatechnology.dataaccess.UserDAOImpl;
+import com.omatechnology.dataaccess.UserDAOInterface;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

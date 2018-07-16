@@ -1,4 +1,4 @@
-package dataaccess;
+package com.omatechnology.dataaccess;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

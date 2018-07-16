@@ -1,4 +1,4 @@
-package dataaccess;
+package com.omatechnology.dataaccess;
 
 import com.omatechnology.entities.Project;
 

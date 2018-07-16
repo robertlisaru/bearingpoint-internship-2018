@@ -1,8 +1,8 @@
 package com.omatechnology.servlets;
 
 import com.omatechnology.entities.Project;
-import dataaccess.ProjectDAOImpl;
-import dataaccess.ProjectDAOInterface;
+import com.omatechnology.dataaccess.ProjectDAOImpl;
+import com.omatechnology.dataaccess.ProjectDAOInterface;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
