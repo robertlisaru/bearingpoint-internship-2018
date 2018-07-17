@@ -31,7 +31,7 @@ public class UserDAOImpl implements UserDAOInterface {
     }
 
     @Override
-    public boolean verifyUserLogin(User user) {
+    public boolean verifyPassword(User user) {
         try {
             databaseConnection.connect();
             String sql = "SELECT * FROM users where Username=? AND Password=?";

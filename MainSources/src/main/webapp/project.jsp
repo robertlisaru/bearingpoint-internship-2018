@@ -14,7 +14,7 @@
         <tr>
             <th>Id</th>
             <th>Project Name</th>
-            <th>Manager </th>
+            <th>Manager</th>
             <th>Client</th>
             <th>Release Date</th>
             <th>Description</th>

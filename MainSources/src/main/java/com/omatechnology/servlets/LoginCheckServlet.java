@@ -1,17 +1,18 @@
 package com.omatechnology.servlets;
 
-import com.omatechnology.entities.User;
 import com.omatechnology.dataaccess.UserDAOImpl;
 import com.omatechnology.dataaccess.UserDAOInterface;
+import com.omatechnology.entities.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet("/loginCheck")
+@WebServlet("/logincheck")
 public class LoginCheckServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     UserDAOInterface userDAO = new UserDAOImpl();
@@ -27,10 +28,20 @@ public class LoginCheckServlet extends HttpServlet {
         User user = new User();
         user.setUsername(username);
         user.setPassword(password);
-        if (userDAO.verifyUserLogin(user)) {
-            response.sendRedirect("PanelWeb/index.html");
+
+        if (request.getSession(false).getAttribute("user") != null) {
+            response.sendRedirect(request.getContextPath() + "/index.jsp");
+            return;
+        }
+
+        if (userDAO.verifyPassword(user)) {
+            HttpSession newSession = request.getSession();
+            newSession.setAttribute("user", user);
+            response.sendRedirect(request.getContextPath() + "/index.jsp");
         } else {
-            response.sendRedirect("welcome.jsp");
+            request.setAttribute("userWarning", new String("Login failed."));
+            getServletContext().getRequestDispatcher("/WEB-INF/pages/login.jsp").
+                    forward(request, response);
         }
     }
 }

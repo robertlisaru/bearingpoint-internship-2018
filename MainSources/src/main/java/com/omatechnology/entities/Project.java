@@ -1,17 +1,19 @@
 package com.omatechnology.entities;
 
+import java.sql.Date;
+
 public class Project {
 
-    private String projectName;
+    private String name;
     private String manager;
     private String client;
-    private String releaseDate;
+    private Date releaseDate;
     private String description;
     private String status;
 
 
-    public Project(String projectName, String manager, String client, String releaseDate, String description, String status) {
-        this.setProjectName(projectName);
+    public Project(String name, String manager, String client, Date releaseDate, String description, String status) {
+        this.setName(name);
         this.setManager(manager);
         this.setClient(client);
         this.setReleaseDate(releaseDate);
@@ -21,11 +23,11 @@ public class Project {
     }
 
     public String getName() {
-        return projectName;
+        return name;
     }
 
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getManager() {
@@ -44,11 +46,11 @@ public class Project {
         this.client = client;
     }
 
-    public String getReleaseDate() {
+    public Date getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(String releaseDate) {
+    public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
     }
 

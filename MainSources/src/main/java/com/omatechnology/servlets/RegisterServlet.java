@@ -1,8 +1,8 @@
 package com.omatechnology.servlets;
 
-import com.omatechnology.entities.User;
 import com.omatechnology.dataaccess.UserDAOImpl;
 import com.omatechnology.dataaccess.UserDAOInterface;
+import com.omatechnology.entities.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,6 +28,6 @@ public class RegisterServlet extends HttpServlet {
         String gender = request.getParameter("gender");
         User user = new User(username, pass, email, gender);
         userDAO.insert(user);
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("login.jsp");
     }
 }
