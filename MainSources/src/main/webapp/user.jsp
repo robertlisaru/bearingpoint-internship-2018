@@ -5,13 +5,10 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<jsp:include page="leftside.jsp"/>
 <table border="1">
     <th>Username</th>
     <th>Email</th>
     <th>Gender</th>
-    <th>Edit</th>
-    <th>Delete</th>
     <c:forEach items="${User}" var="user">
         <tr>
             <td>${user.username}</td>

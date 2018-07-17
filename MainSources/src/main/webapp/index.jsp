@@ -12,24 +12,35 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<tbody>
-<c:forEach items="${projectList}" var="project">
+<table class="table">
+    <thead>
     <tr>
-        <td>${project.name}</td>
-        <td>${project.manager}</td>
-        <td>${project.client}</td>
-        <td>${project.releaseDate}</td>
-        <td>${project.description}</td>
-        <td>${project.status}</td>
-        <br>
+        <th scope="col">Project name</th>
+        <th scope="col">Manager</th>
+        <th scope="col">Client</th>
+        <th scope="col">Release date</th>
+        <th scope="col">Description</th>
+        <th scope="col">Status</th>
     </tr>
-</c:forEach>
-</tbody>
-
+    </thead>
+    <tbody>
+    <c:forEach items="${projectList}" var="project">
+        <tr>
+            <td><a href="project.jsp">${project.name}</a></td>
+            <td>${project.manager}</td>
+            <td>${project.client}</td>
+            <td>${project.releaseDate}</td>
+            <td>${project.description}</td>
+            <td>${project.status}</td>
+            <br>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
 <form method="POST" action="/CreateProject">
     <div class="container" id="BtnCreate">
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create Project</button>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create Project
+        </button>
 
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
