@@ -95,7 +95,7 @@
 					<div class="w-full text-center p-t-55">
 
 
-						<a href="index.jsp" class="txt2 bo1">
+						<a href="login.jsp" class="txt2 bo1">
 							Go to Login
 						</a>
 					</div>
