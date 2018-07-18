@@ -16,17 +16,18 @@ public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private UserDAOInterface userDAO = new UserDAOImpl();
 
-    public RegisterServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String pass = request.getParameter("password");
         String email = request.getParameter("email");
         String gender = request.getParameter("gender");
         User user = new User(username, pass, email, gender);
+        if (userDAO.getUserByUsername(username) != null) {
+            request.setAttribute("userWarning", new String("Username already exists."));
+            getServletContext().getRequestDispatcher("/register.jsp").
+                    forward(request, response);
+            return;
+        }
         userDAO.insert(user);
         response.sendRedirect("login.jsp");
     }

@@ -17,31 +17,24 @@ public class LoginCheckServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     UserDAOInterface userDAO = new UserDAOImpl();
 
-    public LoginCheckServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(password);
-
         if (request.getSession(false).getAttribute("user") != null) {
             response.sendRedirect(request.getContextPath() + "/index");
             return;
         }
 
-        if (userDAO.verifyPassword(user)) {
-            HttpSession newSession = request.getSession();
-            newSession.setAttribute("user", user);
-            response.sendRedirect(request.getContextPath() + "/index");
-        } else {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        User user = userDAO.getUserByUsername(username);
+        if (user == null || !user.getPassword().equals(password)) {
             request.setAttribute("userWarning", new String("Login failed."));
             getServletContext().getRequestDispatcher("/login.jsp").
                     forward(request, response);
+            return;
         }
+
+        HttpSession newSession = request.getSession();
+        newSession.setAttribute("user", user);
+        response.sendRedirect(request.getContextPath() + "/index");
     }
 }

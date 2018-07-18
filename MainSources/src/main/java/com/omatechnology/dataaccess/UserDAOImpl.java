@@ -31,21 +31,28 @@ public class UserDAOImpl implements UserDAOInterface {
     }
 
     @Override
-    public boolean verifyPassword(User user) {
+    public User getUserByUsername(String username) {
         try {
             databaseConnection.connect();
-            String sql = "SELECT * FROM users where Username=? AND Password=?";
+            String sql = "SELECT * FROM users where Username=?";
             PreparedStatement preparedStatement = databaseConnection.getConnection().prepareStatement(sql);
-            preparedStatement.setString(1, user.getUsername());
-            preparedStatement.setString(2, user.getPassword());
+            preparedStatement.setString(1, username);
             ResultSet rs = preparedStatement.executeQuery();
             if (rs.next()) {
-                return true;
+                User user = new User();
+                String password = rs.getString("Password");
+                String email = rs.getString("Email");
+                String gender = rs.getString("Gender");
+                user.setPassword(password);
+                user.setEmail(email);
+                user.setGender(gender);
+                user.setUsername(username);
+                return user;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return false;
+        return null;
     }
 }
 
