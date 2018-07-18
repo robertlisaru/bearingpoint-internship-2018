@@ -33,21 +33,11 @@ public class CreateProjectServlet extends HttpServlet {
         String manager = ((User)request.getSession(false).getAttribute("user")).getUsername();
         String client = request.getParameter("client");
 
-        //region string to sqlDate
         String releaseDate = request.getParameter("releaseDate");
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        java.util.Date date = null;
-        try {
-            date = sdf.parse(releaseDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        java.sql.Date sqlStartDate = new java.sql.Date(date.getTime());
-        //endregion
 
         String description = request.getParameter("description");
         String status = request.getParameter("status");
-        Project project = new Project(projectName, manager, client, sqlStartDate, description, status);
+        Project project = new Project(projectName, manager, client, releaseDate, description, status);
         projectDAO.insert(project);
         response.sendRedirect("project.jsp");
     }
