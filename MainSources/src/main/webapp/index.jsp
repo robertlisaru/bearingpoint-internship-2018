@@ -26,7 +26,7 @@
     <tbody>
     <c:forEach items="${projectList}" var="project">
         <tr>
-            <td><a href="project.jsp">${project.name}</a></td>
+            <td><a href="project?projectID=${project.id}">${project.name}</a></td>
             <td>${project.manager}</td>
             <td>${project.client}</td>
             <td>${project.releaseDate}</td>

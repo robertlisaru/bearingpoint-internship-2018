@@ -1,17 +1,14 @@
 package com.omatechnology.entities;
 
-import java.sql.Date;
-
 public class Project {
 
+    private String id;
     private String name;
     private String manager;
     private String client;
     private String releaseDate;
     private String description;
     private String status;
-
-
     public Project(String name, String manager, String client, String releaseDate, String description, String status) {
         this.setName(name);
         this.setManager(manager);
@@ -20,6 +17,14 @@ public class Project {
         this.setDescription(description);
         this.setStatus(status);
 
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
