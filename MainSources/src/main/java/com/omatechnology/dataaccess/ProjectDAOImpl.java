@@ -66,7 +66,7 @@ public class ProjectDAOImpl implements ProjectDAOInterface {
     }
 
     @Override
-    public void updateProjectByID(Project project) {
+    public void updateProject(Project project) {
         try {
             databaseConnection.connect();
             String sql = "UPDATE projects " +

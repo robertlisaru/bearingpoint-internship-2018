@@ -14,6 +14,7 @@ public class Task {
         this.estimatedDate = estimatedDate;
         this.status = status;
     }
+
     public String getName() {
         return name;
     }

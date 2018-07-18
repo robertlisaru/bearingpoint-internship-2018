@@ -9,6 +9,7 @@ public class Project {
     private String releaseDate;
     private String description;
     private String status;
+
     public Project(String name, String manager, String client, String releaseDate, String description, String status) {
         this.setName(name);
         this.setManager(manager);
