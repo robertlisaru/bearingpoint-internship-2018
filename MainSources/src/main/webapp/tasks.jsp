@@ -5,6 +5,47 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
+<form method="POST" action="/CreateTask">
+    <div class="container" id="BtnCreate">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create Task
+        </button>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Create Task</h4>
+                    </div>
+                    <div class="modal-body">
+                        Task name:<br>
+                        <input type="text" class="tdl-new form-control" name="taskName" placeholder="Type here"><br>
+                        ProjectID:<br>
+                        <input type="text" class="tdl-new form-control" name="projectId" placeholder="Type here"><br>
+                        Release date:<br>
+                        <input type="date" class="tdl-new form-control" name="timeOfCompl" placeholder="Type here"><br>
+                        Status:<br>
+                        <div class="selection">
+                            <select class="selection form-control" name="status">
+                                <option value="Pending">Pending</option>
+                                <option value="Assigned">Assigned</option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="Done">Done</option>
+                            </select>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" value="ADD">Add</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 <table>
     <div class="card-title">
         <thead>
@@ -20,11 +61,10 @@
     </div>
     <tbody>
     <tr>
-        <td><input type="text" class="tdl-new form-control" name="taskId" placeholder=""></td>
-        <td><span><input type="text" class="tdl-new form-control" name="taskName" placeholder=""></span></td>
+
+        <td><span><input type="text" class="tdl-new form-control" name="name" placeholder=""></span></td>
+        <td><input type="text" class="tdl-new form-control" name="projectId" placeholder=""></td>
         <td><span><input type="text" class="tdl-new form-control" name="timeOfCompl" placeholder=""></span></td>
-        <td><span><input type="date" class="tdl-new form-control" name="timeSoFar" placeholder=""></span></td>
-        <td><span><input type="text" class="tdl-new form-control" name="assignedTo" placeholder=""></span></td>
         <td><input type="submit" name="editBtn" value="Edit"></td>
         <td><input type="submit" name="deleteBtn" value="Delete"></td>
     </tr>
