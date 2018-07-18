@@ -29,14 +29,20 @@ public class UpdateProjectServlet extends HttpServlet {
             return;
         }
 
-        String projectName = req.getParameter("projectName");
-        String manager = ((User) req.getSession(false).getAttribute("user")).getUsername();
-        String client = req.getParameter("client");
-        String releaseDate = req.getParameter("releaseDate");
-        String description = req.getParameter("description");
-        String status = req.getParameter("status");
-        Project project = new Project(projectName, manager, client, releaseDate, description, status);
-        projectDAO.updateProject(project);
+        Project project = projectDAO.getProjectByID(projectID);
+        if (project.getManager() == user.getUsername()) {
+            String projectName = req.getParameter("projectName");
+            project.setName(projectName);
+            String client = req.getParameter("client");
+            project.setClient(client);
+            String releaseDate = req.getParameter("releaseDate");
+            project.setReleaseDate(releaseDate);
+            String description = req.getParameter("description");
+            project.setDescription(description);
+            String status = req.getParameter("status");
+            project.setStatus(status);
+            projectDAO.updateProject(project);
+        }
         resp.sendRedirect("/project?projectID=" + projectID);
     }
 }
