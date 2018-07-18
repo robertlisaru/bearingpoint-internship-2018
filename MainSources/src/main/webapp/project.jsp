@@ -38,14 +38,11 @@
             <td>
                 <button type="submit">Edit</button>
             </td>
-            <td>
-                <form action="/deleteProject?projectID=${project.id}" method="POST">
-                    <button type="submit"></button>
-                    Delete
-                </form>
-            </td>
-        </tr>
     </form>
+    <td>
+        <a href="/deleteproject?projectID=${project.id}" class="btn btn-default">Delete</a>
+    </td>
+    </tr>
     </tbody>
 </table>
 </body>
