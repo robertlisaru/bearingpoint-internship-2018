@@ -77,7 +77,25 @@ public class ProjectDAOImpl implements ProjectDAOInterface {
 
     @Override
     public void deleteProjectByID(String id) {
+        try {
+            databaseConnection.connect();
+            String sql = "DELETE FROM tasks WHERE ProjectID=?";
+            PreparedStatement preparedStatement = databaseConnection.getConnection().prepareStatement(sql);
+            preparedStatement.setString(1, id);
+            preparedStatement.executeUpdate();
 
+            sql = "DELETE FROM projects WHERE ID=?";
+            preparedStatement = databaseConnection.getConnection().prepareStatement(sql);
+            preparedStatement.setString(1, id);
+            preparedStatement.executeUpdate();
+
+            preparedStatement.close();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            databaseConnection.close();
+        }
     }
 
     @Override

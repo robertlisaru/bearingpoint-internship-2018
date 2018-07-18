@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 @WebServlet("/CreateProject")
 public class CreateProjectServlet extends HttpServlet {
@@ -30,7 +28,7 @@ public class CreateProjectServlet extends HttpServlet {
         }
 
         String projectName = request.getParameter("projectName");
-        String manager = ((User)request.getSession(false).getAttribute("user")).getUsername();
+        String manager = ((User) request.getSession(false).getAttribute("user")).getUsername();
         String client = request.getParameter("client");
 
         String releaseDate = request.getParameter("releaseDate");
