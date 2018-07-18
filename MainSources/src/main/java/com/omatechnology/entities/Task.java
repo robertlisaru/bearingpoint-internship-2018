@@ -4,14 +4,20 @@ public class Task {
 
     private String name;
     private int projectID;
-    private String estimatedDate;
+    private String dueDate;
     private String status;
 
 
-    public Task(String name, int projectID, String estimatedDate, String status) {
+    public Task(String name, int projectID, String dueDate, String status) {
         this.name = name;
         this.projectID = projectID;
-        this.estimatedDate = estimatedDate;
+        this.dueDate = dueDate;
+        this.status = status;
+    }
+
+    public Task(String name, String dueDate, String status) {
+        this.name = name;
+        this.dueDate = dueDate;
         this.status = status;
     }
 
@@ -31,12 +37,12 @@ public class Task {
         this.projectID = projectID;
     }
 
-    public String getEstimatedDate() {
-        return estimatedDate;
+    public String getDueDate() {
+        return dueDate;
     }
 
-    public void setEstimatedDate(String estimatedDate) {
-        this.estimatedDate = estimatedDate;
+    public void setDueDate(String dueDate) {
+        this.dueDate = dueDate;
     }
 
     public String getStatus() {

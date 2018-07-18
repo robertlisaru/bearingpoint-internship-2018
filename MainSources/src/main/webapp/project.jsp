@@ -45,6 +45,25 @@
     </tr>
     </tbody>
 </table>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Task name</th>
+        <th scope="col">Due date</th>
+        <th scope="col">Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach items="${taskList}" var="task">
+        <tr>
+            <td>${task.name}</td>
+            <td>${task.dueDate}</td>
+            <td>${task.status}</td>
+            <br>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
 <form method="POST" action="/CreateTask">
     <input name="projectId" type="hidden" value="${project.id}">
     <div class="container" id="BtnCreate">

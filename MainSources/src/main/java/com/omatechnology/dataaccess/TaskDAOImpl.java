@@ -22,7 +22,7 @@ public class TaskDAOImpl implements TaskDAOInterface {
 
             preparedStatement.setString(1, task.getName());
             preparedStatement.setInt(2, task.getProjectID());
-            preparedStatement.setString(3, task.getEstimatedDate());
+            preparedStatement.setString(3, task.getDueDate());
             preparedStatement.setString(4, task.getStatus());
 
 
@@ -40,8 +40,8 @@ public class TaskDAOImpl implements TaskDAOInterface {
         List<Task> taskList = new ArrayList<>();
         try {
             databaseConnection.connect();
-            String sql = "SELECT t.TaskName, t.ProjectID, t.EstimatedTime, t.Status " +
-                    " FROM tasks WHERE ProjectID=?";
+            String sql = "SELECT t.TaskName,t.DueDate, t.Status " +
+                    " FROM tasks t WHERE ProjectID=?";
 
             PreparedStatement preparedStatement = databaseConnection.getConnection().prepareStatement(sql);
 
@@ -49,17 +49,17 @@ public class TaskDAOImpl implements TaskDAOInterface {
             ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {
-                String name = rs.getString("taskName");
-                int projectID = (Integer.parseInt(rs.getString("projectId")));
-                String estimatedDate = rs.getString("timeOfCompl");
-                String status = rs.getString("status");
-                Task task = new Task(name, projectID, estimatedDate, status);
+                String name = rs.getString("TaskName");
+                String estimatedDate = rs.getString("DueDate");
+                String status = rs.getString("Status");
+                Task task = new Task(name, estimatedDate, status);
                 taskList.add(task);
 
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        databaseConnection.close();
         return taskList;
     }
 }
