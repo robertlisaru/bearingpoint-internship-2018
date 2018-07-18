@@ -7,12 +7,12 @@ public class Project {
     private String name;
     private String manager;
     private String client;
-    private Date releaseDate;
+    private String releaseDate;
     private String description;
     private String status;
 
 
-    public Project(String name, String manager, String client, Date releaseDate, String description, String status) {
+    public Project(String name, String manager, String client, String releaseDate, String description, String status) {
         this.setName(name);
         this.setManager(manager);
         this.setClient(client);
@@ -46,11 +46,11 @@ public class Project {
         this.client = client;
     }
 
-    public Date getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 

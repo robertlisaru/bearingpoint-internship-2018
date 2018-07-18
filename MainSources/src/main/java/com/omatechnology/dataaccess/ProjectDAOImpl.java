@@ -23,7 +23,7 @@ public class ProjectDAOImpl implements ProjectDAOInterface {
             preparedStatement.setString(1, project.getName());
             preparedStatement.setString(2, project.getManager());
             preparedStatement.setString(3, project.getClient());
-            preparedStatement.setDate(4, project.getReleaseDate());
+            preparedStatement.setString(4, project.getReleaseDate());
             preparedStatement.setString(5, project.getDescription());
             preparedStatement.setString(6, project.getStatus());
 
@@ -53,7 +53,7 @@ public class ProjectDAOImpl implements ProjectDAOInterface {
                 String name = rs.getString("Name");
                 String manager = rs.getString("Manager");
                 String client = rs.getString("Client");
-                Date releaseDate = rs.getDate("ReleaseDate");
+                String releaseDate = rs.getString("ReleaseDate");
                 String description = rs.getString("Description");
                 String status = rs.getString("Status");
                 Project project = new Project(name, manager, client, releaseDate, description, status);
@@ -75,7 +75,7 @@ public class ProjectDAOImpl implements ProjectDAOInterface {
                 String name = rs.getString("Name");
                 String manager = rs.getString("Manager");
                 String client = rs.getString("Client");
-                Date releaseDate = rs.getDate("ReleaseDate");
+                String releaseDate = rs.getString("ReleaseDate");
                 String description = rs.getString("Description");
                 String status = rs.getString("Status");
                 Project project = new Project(name, manager, client, releaseDate, description, status);
