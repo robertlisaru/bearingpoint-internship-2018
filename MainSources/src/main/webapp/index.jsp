@@ -57,7 +57,7 @@
                         Client:<br>
                         <input type="text" class="tdl-new form-control" name="client" placeholder="Type here"><br>
                         Release date:<br>
-                        <input type="date" class="tdl-new form-control" name=releaseDate" placeholder="Type here"><br>
+                        <input type="date" class="tdl-new form-control" name="releaseDate" placeholder="Type here"><br>
                         Description:<br>
                         <input type="text" class="tdl-new form-control" name="description" placeholder="Type here"><br>
                         Status:<br>

@@ -16,11 +16,6 @@ import java.io.IOException;
 public class CreateProjectServlet extends HttpServlet {
     ProjectDAOInterface projectDAO = new ProjectDAOImpl();
 
-    public CreateProjectServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession(false).getAttribute("user") == null) {
             response.sendRedirect(request.getContextPath() + "/login.jsp");
@@ -37,6 +32,6 @@ public class CreateProjectServlet extends HttpServlet {
         String status = request.getParameter("status");
         Project project = new Project(projectName, manager, client, releaseDate, description, status);
         projectDAO.insert(project);
-        response.sendRedirect("project.jsp");
+        response.sendRedirect("/index");
     }
 }
