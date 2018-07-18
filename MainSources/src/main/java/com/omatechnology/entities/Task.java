@@ -1,10 +1,12 @@
 package com.omatechnology.entities;
 
 public class Task {
+
     private String name;
     private int projectID;
     private String estimatedDate;
     private String status;
+
 
     public Task(String name, int projectID, String estimatedDate, String status) {
         this.name = name;
@@ -12,7 +14,6 @@ public class Task {
         this.estimatedDate = estimatedDate;
         this.status = status;
     }
-
     public String getName() {
         return name;
     }

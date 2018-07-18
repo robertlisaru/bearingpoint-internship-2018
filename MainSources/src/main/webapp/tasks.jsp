@@ -46,6 +46,31 @@
         </div>
     </div>
 </form>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Task name</th>
+        <th scope="col">ProjectID</th>
+        <th scope="col">Estimated Time</th>
+        <th scope="col">Status </th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach items="${taskList}" var="task">
+        <tr>
+            <td><a href="task?taskID=${task.id}">${task.name}</a></td>
+            <td>${task.projectID}</td>
+            <td>${project.estimatedTime}</td>
+            <td>${project.status}</td>
+            <br>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
+
+
+
 <table>
     <div class="card-title">
         <thead>
