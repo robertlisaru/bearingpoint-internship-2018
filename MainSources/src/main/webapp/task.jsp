@@ -1,30 +1,35 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Oma tech</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<table>
+<table class="table">
     <div class="card-title">
         <thead>
         <tr>
-            <th>Task ID</th>
-            <th><a href="task.jsp" name="task"></a> Task name </th>
-            <th>Estimated time of completion</th>
-            <th> Status </th>
-            <th>Time so far</th>
-            <th>Assigned to</th>
+            <th>Task Name</th>
+            <th>Due date</th>
+            <th>Status</th>
         </tr>
         </thead>
     </div>
     <tbody>
-    <tr>
-        <td><span><input type="text" class="tdl-new form-control" name="name" placeholder=""></span></td>
-        <td><input type="text" class="tdl-new form-control" name="projectId" placeholder=""></td>
-        <td><span><input type="text" class="tdl-new form-control" name="timeOfCompl" placeholder=""></span></td>
-        <td><input type="submit" name="editBtn" value="Edit"></td>
-        <td><input type="submit" name="deleteBtn" value="Delete"></td>
+    <form method="GET" action="/updatetask">
+        <input type="hidden" name="taskID" value="${task.id}">
+        <tr>
+            <td><input type="text" class="tdl-new form-control" name="taskName" value="${task.name}"></td>
+            <td><span><input type="text" class="tdl-new form-control" name="dueDate" value="${task.dueDate}"></span></td>
+            <td><span><input type="text" class="tdl-new form-control" name="status" value="${task.status}"></span></td>
+            <td>
+                <button type="submit">Update</button>
+            </td>
+    </form>
+
+    <td>
+        <a href="/deletetask?taskID=${task.id}" class="btn btn-default">Delete</a>
+    </td>
     </tr>
     </tbody>
 </table>

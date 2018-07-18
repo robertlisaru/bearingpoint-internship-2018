@@ -2,11 +2,11 @@ package com.omatechnology.entities;
 
 public class Task {
 
+    private String id;
     private String name;
     private int projectID;
     private String dueDate;
     private String status;
-
 
     public Task(String name, int projectID, String dueDate, String status) {
         this.name = name;
@@ -19,6 +19,21 @@ public class Task {
         this.name = name;
         this.dueDate = dueDate;
         this.status = status;
+    }
+
+    public Task(String id, String name, String dueDate, String status) {
+        this.id = id;
+        this.name = name;
+        this.dueDate = dueDate;
+        this.status = status;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -52,4 +67,6 @@ public class Task {
     public void setStatus(String status) {
         this.status = status;
     }
+
+
 }

@@ -56,7 +56,7 @@
     <tbody>
     <c:forEach items="${taskList}" var="task">
         <tr>
-            <td>${task.name}</td>
+            <td><a href="task?taskID=${task.id}">${task.name}</a></td>
             <td>${task.dueDate}</td>
             <td>${task.status}</td>
             <br>
