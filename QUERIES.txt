@@ -1,0 +1,48 @@
+  
+  
+        PROJECT.JSP
+		  
+  Detaliile unui proiect:  SELECT Name, Manager,  CLient, ReleaseDate, Description, Status FROM projects WHERE ID=1; 
+  
+  Tabel cu task-urile asociate proiectului: SELECT TaskName, EstimatedTime, Status FROM tasks WHERE ProjectID=3;
+  
+  Formular editare proiect: SELECT Name, ReleaseDate, Description FROM projects;
+                            UPDATE projects 
+                            SET Name='$varname', ReleaseDate='$varreldate', Description='$vardescription';
+							
+  Delete project button:  DELETE FROM tasks WHERE ProjectID=1;
+                         DELETE FROM projects WHERE ID=1;
+						 
+						 
+  Create task formular:   INSERT INTO tasks(TaskName,ProjectID,EstimatedTime,Status ) +
+                VALUES(?,?,?,?)";
+				
+				
+		TASK.JSP:
+				
+				
+  Detaliile task-ului: SELECT TaskName, EstimatedTime, Status FROM tasks WHERE ID=3;
+				
+  Tabel/lista cu userii task-ului + buton de "unassign" la fiecare :SELECT Username FROM taskworkers WHERE TaskID=1;
+                                                                    DELETE "robert" FROM taskworkers WHERE TaskID=1;
+																				  
+																				  																		  
+  Text field + buton "assing" new user to task :  INSERT INTO taskworkers(TaskID,Username) VALUES ('2', 'robert');
+				
+  Formular actualizare: SELECT TaskName,ProjectID, EstimatedTime, Status FROM tasks;
+                        UPDATE tasks 
+                        SET TaskName='$vartaskname', ProjectID='$varprojectid', EstimatedTime='$varestimatedtime', Status='$varstatus';
+									  
+  Delete task button: DELETE FROM tasks WHERE ID=3;
+				
+  Lista comentarii: SELECT TaskID,Comment,Username,Date_Hour FROM comments WHERE TaskID=2;
+
+  Text field + button new comment :INSERT INTO comments(TaskID,Comment,Username,Date_Hour) VALUES ('2', 'mesaj bla bla','$user','$date_hour');
+				
+				
+				
+				
+		USER.JSP
+
+  Detalii user: SELECT Username, Email, Gender FROM users WHERE Username='$username'; 
+				
