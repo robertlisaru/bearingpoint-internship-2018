@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `proiect` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE  IF NOT EXISTS `proiect` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_romanian_ci */;
 USE `proiect`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
@@ -136,7 +136,7 @@ CREATE TABLE `projects` (
   PRIMARY KEY (`ID`),
   KEY `Manager_idx` (`Manager`),
   CONSTRAINT `Manager` FOREIGN KEY (`Manager`) REFERENCES `users` (`Username`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -145,6 +145,7 @@ CREATE TABLE `projects` (
 
 LOCK TABLES `projects` WRITE;
 /*!40000 ALTER TABLE `projects` DISABLE KEYS */;
+INSERT INTO `projects` VALUES (4,'fdsaf','robert','asdf','2011-11-11 00:00:00','asdf','aasdf');
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -159,14 +160,12 @@ CREATE TABLE `tasks` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `TaskName` varchar(45) DEFAULT NULL,
   `ProjectID` int(11) DEFAULT NULL,
-  `EstimatedTime` datetime DEFAULT NULL,
+  `DueDate` datetime DEFAULT NULL,
   `Status` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `ProjectID_idx` (`ProjectID`),
-  KEY `tasks_Status_idx` (`Status`),
-  CONSTRAINT `tasks_ProjectID` FOREIGN KEY (`ProjectID`) REFERENCES `projects` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `tasks_Status` FOREIGN KEY (`Status`) REFERENCES `taskstatuses` (`Status`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `tasks_ProjectID` FOREIGN KEY (`ProjectID`) REFERENCES `projects` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -175,29 +174,8 @@ CREATE TABLE `tasks` (
 
 LOCK TABLES `tasks` WRITE;
 /*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
+INSERT INTO `tasks` VALUES (3,'fsdfad',4,'2018-07-14 00:00:00','Pending');
 /*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `taskstatuses`
---
-
-DROP TABLE IF EXISTS `taskstatuses`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `taskstatuses` (
-  `Status` varchar(45) NOT NULL,
-  PRIMARY KEY (`Status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `taskstatuses`
---
-
-LOCK TABLES `taskstatuses` WRITE;
-/*!40000 ALTER TABLE `taskstatuses` DISABLE KEYS */;
-/*!40000 ALTER TABLE `taskstatuses` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -288,4 +266,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-16 12:26:37
+-- Dump completed on 2018-07-18 14:00:16

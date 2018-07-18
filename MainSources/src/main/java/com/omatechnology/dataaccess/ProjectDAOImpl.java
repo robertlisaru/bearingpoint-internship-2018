@@ -65,14 +65,31 @@ public class ProjectDAOImpl implements ProjectDAOInterface {
         return project;
     }
 
-    /*@Override
-    public List<Task> getTasksByProjectID(int id) {
-        return null;
-    }*/
-
     @Override
-    public void updateProjectByID(Project project, String id) {
+    public void updateProjectByID(Project project) {
+        try {
+            databaseConnection.connect();
+            String sql = "UPDATE projects " +
+                    "SET Name=?, Manager=?, Client=?, ReleaseDate=?, Description=?, Status=? " +
+                    "WHERE ID=? ";
+            PreparedStatement preparedStatement = databaseConnection.getConnection().prepareStatement(sql);
 
+            preparedStatement.setString(1, project.getName());
+            preparedStatement.setString(2, project.getManager());
+            preparedStatement.setString(3, project.getClient());
+            preparedStatement.setString(4, project.getReleaseDate());
+            preparedStatement.setString(5, project.getDescription());
+            preparedStatement.setString(6, project.getStatus());
+            preparedStatement.setString(7, project.getId());
+
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            databaseConnection.close();
+        }
     }
 
     @Override

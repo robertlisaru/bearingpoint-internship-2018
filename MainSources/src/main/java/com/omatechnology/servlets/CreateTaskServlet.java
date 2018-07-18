@@ -24,7 +24,6 @@ public class CreateTaskServlet extends HttpServlet {
 
         Task task = new Task(name, projectID, estimatedDate, status);
         taskDAO.insert(task);
-        response.sendRedirect("project.jsp");
-
+        response.sendRedirect("/project?projectID=" + projectID);
     }
 }
