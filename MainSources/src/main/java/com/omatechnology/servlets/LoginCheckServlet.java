@@ -30,17 +30,17 @@ public class LoginCheckServlet extends HttpServlet {
         user.setPassword(password);
 
         if (request.getSession(false).getAttribute("user") != null) {
-            response.sendRedirect(request.getContextPath() + "/index.jsp");
+            response.sendRedirect(request.getContextPath() + "/index");
             return;
         }
 
         if (userDAO.verifyPassword(user)) {
             HttpSession newSession = request.getSession();
             newSession.setAttribute("user", user);
-            response.sendRedirect(request.getContextPath() + "/index.jsp");
+            response.sendRedirect(request.getContextPath() + "/index");
         } else {
             request.setAttribute("userWarning", new String("Login failed."));
-            getServletContext().getRequestDispatcher("/WEB-INF/pages/login.jsp").
+            getServletContext().getRequestDispatcher("/login.jsp").
                     forward(request, response);
         }
     }
